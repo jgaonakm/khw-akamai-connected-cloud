@@ -1,10 +1,9 @@
 # Kubernetes The Hard Way
 
-This tutorial walks you through setting up Kubernetes the hard way. This guide is not for people looking for a fully automated command to bring up a Kubernetes cluster. If that's you then check out [Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine), or the [Getting Started Guides](https://kubernetes.io/docs/setup).
+This tutorial walks you through setting up Kubernetes the hard way on [Akamai Connected Cloud](https://www.linode.com/), based on [the guide originally created by Kelsey Hightower](https://github.com/kelseyhightower/kubernetes-the-hard-way). The goal is to help you understand how to bring up a Kubernetes cluster manually, i.e., not using a fully-automated command. 
 
-Kubernetes The Hard Way is optimized for learning, which means taking the long route to ensure you understand each task required to bootstrap a Kubernetes cluster.
+For a ready-to-deploy version, check out [Linode Kubernetes Engine](https://www.linode.com/products/kubernetes/), or the [Getting Started Guides](https://kubernetes.io/docs/setup).
 
-> The results of this tutorial should not be viewed as production ready, and may receive limited support from the community, but don't let that stop you from learning!
 
 ## Copyright
 
@@ -13,33 +12,36 @@ Kubernetes The Hard Way is optimized for learning, which means taking the long r
 
 ## Target Audience
 
-The target audience for this tutorial is someone planning to support a production Kubernetes cluster and wants to understand how everything fits together.
+Kubernetes The Hard Way is optimized for learning, which means taking the long route to ensure you understand each task required to bootstrap a Kubernetes cluster. The target audience for this tutorial is people interested in understanding how the Kubernetes components fits together, either for performing their role better or achieving a certification like CKAD.
 
-## Cluster Details
+> The results of this tutorial should not be viewed as production ready, but don't let that stop you from learning!
 
-Kubernetes The Hard Way guides you through bootstrapping a highly available Kubernetes cluster with end-to-end encryption between components and RBAC authentication.
-
-* [kubernetes](https://github.com/kubernetes/kubernetes) v1.21.0
-* [containerd](https://github.com/containerd/containerd) v1.4.4
-* [coredns](https://github.com/coredns/coredns) v1.8.3
-* [cni](https://github.com/containernetworking/cni) v0.9.1
-* [etcd](https://github.com/etcd-io/etcd) v3.4.15
 
 ## Labs
 
-This tutorial assumes you have access to the [Google Cloud Platform](https://cloud.google.com). While GCP is used for basic infrastructure requirements the lessons learned in this tutorial can be applied to other platforms.
+This tutorial uses [Akamai Connected Cloud](https://www.linode.com/), but the knowledge can be applied to other platforms. **You can [create an account here](https://login.linode.com/signup?promo=docs080123)**
 
-* [Prerequisites](docs/01-prerequisites.md)
-* [Installing the Client Tools](docs/02-client-tools.md)
-* [Provisioning Compute Resources](docs/03-compute-resources.md)
-* [Provisioning the CA and Generating TLS Certificates](docs/04-certificate-authority.md)
-* [Generating Kubernetes Configuration Files for Authentication](docs/05-kubernetes-configuration-files.md)
-* [Generating the Data Encryption Config and Key](docs/06-data-encryption-keys.md)
-* [Bootstrapping the etcd Cluster](docs/07-bootstrapping-etcd.md)
-* [Bootstrapping the Kubernetes Control Plane](docs/08-bootstrapping-kubernetes-controllers.md)
-* [Bootstrapping the Kubernetes Worker Nodes](docs/09-bootstrapping-kubernetes-workers.md)
-* [Configuring kubectl for Remote Access](docs/10-configuring-kubectl.md)
-* [Provisioning Pod Network Routes](docs/11-pod-network-routes.md)
-* [Deploying the DNS Cluster Add-on](docs/12-dns-addon.md)
-* [Smoke Test](docs/13-smoke-test.md)
-* [Cleaning Up](docs/14-cleanup.md)
+### Cluster Details
+
+Kubernetes The Hard Way guides you through bootstrapping a highly available Kubernetes cluster with end-to-end encryption between components and RBAC authentication. It has been tested with the following versions
+
+* [kubernetes](https://github.com/kubernetes/kubernetes) v1.29.0
+* [containerd](https://github.com/containerd/containerd) v1.7.11
+* [runc](https://github.com/opencontainers/runc/) v1.1.10
+* [cni](https://github.com/containernetworking/cni) v1.4.0
+* [etcd](https://github.com/etcd-io/etcd) v3.5.11
+* [coredns](https://github.com/coredns/coredns) v1.11.1
+
+### Content
+
+* [Prerequisites](guide/0.prerequisites.md)
+* [Provisioning Compute Instances](guide/1.instances.md)
+* [Creating the certificates](guide/2.certificates.md)
+* [Generating the configuration files](guide/3.configFiles.md)
+* [Bootstrapping the Control Plane (part 1)](guide/4.controlPlane-1.md)
+* [Bootstrapping the Control Plane (part 2)](guide/4.controlPlane-2.md)
+* [Bootstrapping the Worker Nodes](guide/5.workerNodes.md)
+* [Configuring networking](guide/6.networking.md)
+* [Smoke Test](guide/7.smokeTests.md)
+* [Cleaning Up](guide/8.cleanUp.md)
+

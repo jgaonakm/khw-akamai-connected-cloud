@@ -19,7 +19,7 @@ Kubernetes The Hard Way is optimized for learning, which means taking the long r
 
 ## Labs
 
-This tutorial uses [Akamai Connected Cloud](https://www.linode.com/), but the knowledge can be applied to other platforms. **You can [create an account here](https://login.linode.com/signup?promo=docs080123)**
+This tutorial uses [Akamai Connected Cloud](https://www.linode.com/), but the knowledge can be applied to other platforms. **If needed, you can [create a Linode account](https://login.linode.com/signup?promo=docs080123&utm_source=akamai&utm_medium=article&utm_id=DvCGuiaJG&utm_campaign=F-MC-62397) to try this guide with a $100 credit.** _This credit will be applied to any valid services used during your first 60 days._
 
 ### Cluster Details
 
